@@ -6,10 +6,9 @@
 int main()
 {
     int n;
-    int sum;
+    int sum = 0;
     int queue;
-    int sum;
-    printf("\tn= ");
+    printf("n= ");
     scanf("%d", &n);
     while (n!=0)
     {
@@ -17,6 +16,6 @@ int main()
         n = (n-queue)/10;
         sum = sum+queue;
     }
-    printf("Сумма цифр числа равна", sum);
+    printf(sum);
     getchar();   
 }
