@@ -1,14 +1,17 @@
+#include <locale.h>
 #include <stdio.h>
-#include <coniow.h>
-#define n 2
-int main () {
+#include <stdlib.h>
+
+int main () 
+{
+    int n = 2;
    int A[2*n][2*n],
       B1[n][n],
       B2[n][n],
       B3[n][n],
       B4[n][n];
    int i,j,k,m;
-   clrscr();
+
    printf("Original array\n");
    
    for (i=0;i<2*n;i++){
