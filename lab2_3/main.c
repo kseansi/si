@@ -19,11 +19,11 @@ int main()
     int max = -1;
     int min = 1000000; 
     int i_min = n; 
-    
+
     for (int i = 0; i < n; i++)
     {
         printf("\ta[%d]= ", i);
-        scanf("%d" ,&a[j]);
+        scanf("%d" ,&a[i]);
     }
 
     for (int i = 0; i < n; i++)
@@ -44,13 +44,20 @@ int main()
         }
     }
 
-    for (int i = i_max; i <= i_min; i++)
+    for (int i = i_max; i < i_min; i++)
     {
-        /* code */
+       for(int j = i_max; j < i_min - i - 1; j++) 
+        {
+           if(a[j] < a[j+1]) 
+           {
+              int tmp = a[j];
+              a[j] = a[j+1];
+              a[j+1] = tmp; 
+           }
+        }
     }
-    
     printf("Преобразованный массив:\n");
-    for (int i = 0; i < j; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("\ta[%d]= %d\n", i, a[i]);
     }
