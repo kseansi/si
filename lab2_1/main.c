@@ -30,11 +30,25 @@ int main()
     }
     if (choise == 0)
     {
-        /* code */
+        for (int i = n; i >=0; i--)
+        {
+            if (a[i]<0)
+            {
+                printf(a[i]);
+            }
+            
+        }
+        
     }
     else
     {
-        /* code */
+        for (int i = n; i >=0; i--)
+        {
+            if (a[i]>0)
+            {
+                printf(a[i]);
+            }
+        }
     }
     getchar();
 }
